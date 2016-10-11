@@ -1,0 +1,10 @@
+sshd:
+    build: ssh
+    container_name: sshd
+    entrypoint: /usr/local/bin/supervisord
+    ports:
+        - "443:443"
+    expose:
+        - "3773"
+    dns: ["127.0.0.1"]
+
